@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    height: auto;
+    width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0; 
+}
+
+.grid-item {
+    height: 58px;
+    width: 58px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+.change-color {
+    background-color: black;
+}
+
+button {
+    margin-bottom: 10px;
+}
