@@ -7,6 +7,11 @@ body {
     background-color: aquamarine;
 }
 
+h1 {
+    font-size: 60px;
+    text-shadow: 5px 5px rgb(177, 166, 179);
+}
+
 .container {
     height: 960px;
     width: 960px;
@@ -14,7 +19,7 @@ body {
     grid-template-columns: repeat(16, 2fr);
     grid-template-rows: repeat(16,2fr);
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 
 .grid-item {
@@ -28,6 +33,50 @@ body {
     background-color: black;
 }
 
+.options {
+    display: flex;
+    justify-content: space-evenly;
+    width: 700px;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
 button {
-    margin-bottom: 10px;
+    width: 120px;
+    font-size: 30px;
+    background-color: white;
+    box-shadow: 5px 5px;
+    outline: none;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(1.2);
+}
+
+.color-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#color-input {
+    width: 80px;
+    height: 30px;
+}
+
+#color-input:hover {
+    transform: scale(1.1);
+}
+
+#color-input:active {
+    transform: scale(1.2);
+}
+
+p {
+    margin: 0;
+    font-size: 20px;
 }

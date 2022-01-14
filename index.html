@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch A Sketch</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+    <h1>Etch A Sketch</h1>
     <div class="options">
-        <button id="btn-dim">Set Dimension</button>
-        <button id="btn-reset">Reset</button>
+        <button id="btn-dim">Set Dim</button>
+        <button id="btn-eraser">Eraser</button>
+        <button id="btn-draw">Etch</button>
+        <button id="btn-reset">Clear</button>
+        <div class="color-picker">
+            <input type="color" id="color-input">
+            <p>Choose Color</p>
+        </div>
     </div>
-    
     <div class="container" draggable="false"></div>
 </body>
 </html>
