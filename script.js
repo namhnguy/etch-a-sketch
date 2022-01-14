@@ -18,10 +18,10 @@ function createDefaultGrid() {
         gridItem.addEventListener('mouseup', function () {
             mouseIsDown = false;
         })
-        gridItem.addEventListener('dragstart', (e) => {
+        gridItem.addEventListener('dragstart', function (e) {
             e.preventDefault();
         })
-        gridItem.addEventListener('drop', (e) => {
+        gridItem.addEventListener('drop', function (e) {
             e.preventDefault();
         })
         grid.appendChild(gridItem);
@@ -55,10 +55,10 @@ btn.addEventListener('click', () => {
         gridItem.addEventListener('mouseup', function () {
             mouseIsDown = false;
         })
-        gridItem.addEventListener('dragstart', (e) => {
+        gridItem.addEventListener('dragstart', function (e) {
             e.preventDefault();
         })
-        gridItem.addEventListener('drop', (e) => {
+        gridItem.addEventListener('drop', function (e) {
             e.preventDefault();
         })
         grid.appendChild(gridItem);
@@ -73,14 +73,14 @@ reset.addEventListener('click', function () {
 })
 
 const colorChooser = document.querySelector('#color-input');
-colorChooser.addEventListener('input', function() {
+colorChooser.addEventListener('input', function () {
     let colorPick = document.getElementById('color-input').value;
     for (let i = 0; i < gridSize * gridSize; i++) {
-        grid.children[i].addEventListener('mousedown', function(e) {
+        grid.children[i].addEventListener('mousedown', function (e) {
             e.target.style.backgroundColor = colorPick;
             mouseIsDown = true;
         })
-        grid.children[i].addEventListener('mouseover', function(e) {
+        grid.children[i].addEventListener('mouseover', function (e) {
             if (mouseIsDown) {
                 e.target.style.backgroundColor = colorPick;
             }
@@ -89,13 +89,13 @@ colorChooser.addEventListener('input', function() {
 })
 
 const eraser = document.querySelector('#btn-eraser');
-eraser.addEventListener('click', function() {
+eraser.addEventListener('click', function () {
     for (let i = 0; i < gridSize * gridSize; i++) {
-        grid.children[i].addEventListener('mousedown', function(e) {
+        grid.children[i].addEventListener('mousedown', function (e) {
             e.target.style.backgroundColor = 'white';
             mouseIsDown = true;
         })
-        grid.children[i].addEventListener('mouseover', function(e) {
+        grid.children[i].addEventListener('mouseover', function (e) {
             if (mouseIsDown) {
                 e.target.style.backgroundColor = 'white';
             }
@@ -104,14 +104,14 @@ eraser.addEventListener('click', function() {
 })
 
 const draw = document.querySelector('#btn-draw');
-draw.addEventListener('click', function() {
+draw.addEventListener('click', function () {
     let colorPick = document.getElementById('color-input').value;
     for (let i = 0; i < gridSize * gridSize; i++) {
-        grid.children[i].addEventListener('mousedown', function(e) {
+        grid.children[i].addEventListener('mousedown', function (e) {
             e.target.style.backgroundColor = colorPick;
             mouseIsDown = true;
         })
-        grid.children[i].addEventListener('mouseover', function(e) {
+        grid.children[i].addEventListener('mouseover', function (e) {
             if (mouseIsDown) {
                 e.target.style.backgroundColor = colorPick;
             }
